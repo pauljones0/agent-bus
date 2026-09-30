@@ -1,0 +1,24 @@
+[package]
+name = "agent-bus"
+version = "0.1.0"
+edition = "2021"
+description = "Native Rust agent-bus: durable exact-topic post/fetch with cursor gap detection, atomic lease claims, JSON-lines wire compatibility"
+license = "MIT"
+
+[[bin]]
+name = "agent-bus-broker"
+path = "src/main.rs"
+
+[[bin]]
+name = "agent-bus-cargo-guard"
+path = "src/bin/agent-bus-cargo-guard.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "=0.10.9"
+base64 = { version = "=0.23.1", default-features = false, features = ["std"] }
+libc = "=0.2.189"
+
+[dev-dependencies]
+serde_json = "1"

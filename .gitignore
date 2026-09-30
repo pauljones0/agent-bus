@@ -1,0 +1,37 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+tokens.json
+tokens.*.json
+*.token
+*.tokens
+*.pem
+*.key
+credentials/
+secrets/
+private/
+
+# Broker state, messages, artifacts, and run reports
+data/
+state/
+runtime/
+artifacts/
+logs/
+*.log
+*.wal
+*.sock
+*.pid
+task-reports/
+
+# Build outputs and legacy caches
+target/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*~
